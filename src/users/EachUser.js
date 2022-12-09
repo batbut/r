@@ -2,23 +2,23 @@ import { Link } from "react-router-dom";
 import { API_URL } from "../config";
 import axios from "axios"
 import React,{useEffect,
-    useRef,useState } from 'react'
+    useState } from 'react'
     import fetch from '../fetch/index'
     import useAsync from '../hooks/useAsync'
 
 export default function EachUser({ user, fetchData }) {
-    const [idvalue, setIdValue] = useState(user.id);
-    const [noregisValue, setNoRegisValue] = useState(user.noregis);
-    const [noinventarisValue, setNoInventarisValue] = useState(user.noinvetrasi);
-    const [namalokasiValue, setNamaLokasiValue] = useState(user.namalokasilokasi);
-    const [lokasitemuanValue, setLokasiTemuanValue] = useState(user.lokasitemuan);
-    const [tahunperolehanValue, setTahunPerolehanValue] = useState(user.tahunperolehan);
-    const [deteminatorValue, setDeteminatorValue] = useState(user.deteminator);
-    const [keteranganValue, setKeteranganValue] = useState(user.keterangan);
+    const [ setIdValue] = useState(user.id);
+    const [ setNoRegisValue] = useState(user.noregis);
+    const [ setNoInventarisValue] = useState(user.noinvetrasi);
+    const [ setNamaLokasiValue] = useState(user.namalokasilokasi);
+    const [ setLokasiTemuanValue] = useState(user.lokasitemuan);
+    const [ setTahunPerolehanValue] = useState(user.tahunperolehan);
+    const [ setDeteminatorValue] = useState(user.deteminator);
+    const [setKeteranganValue] = useState(user.keterangan);
 
     const {  run } = useAsync();
 
-    const refContainer = useRef(null);
+
     useEffect(() => {
         run(fetch({ url: "https://sbc-sebatcabut.herokuapp.com" }));
       }, [run]);

@@ -14,7 +14,7 @@ export default function ViewUser() {
     const fetchUser = async () => {
       setLoading(true)
       try {
-        const response = await fetch(`${API_URL}/fosil/${id}`);
+        const response = await fetch(`${API_URL}${id}`);
         const json = await response.json();
         setUser(json.data);
         setLoading(false)

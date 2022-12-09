@@ -19,7 +19,7 @@ export default function List() {
     const fetchData = async () => {
         const page = searchParams.get("page") ? "&page=" + searchParams.get("page") : '';
         try {
-            const response = await fetch(`${API_URL}fosil${page}`);
+            const response = await fetch(`${API_URL}fosils${page}`);
             const json = await response.json();
             setUsers(json.data.items);
             setPages(json.data.total_pages)

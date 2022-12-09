@@ -19,7 +19,7 @@ export default function List() {
     const fetchData = async () => {
         const page = searchParams.get("page") ? "&page=" + searchParams.get("page") : '';
         try {
-            const response = await fetch(`${API_URL}/users?sort=-id&size=5${page}`);
+            const response = await fetch(`${API_URL}/fosil${page}`);
             const json = await response.json();
             setUsers(json.data.items);
             setPages(json.data.total_pages)
@@ -38,14 +38,7 @@ export default function List() {
         navigate("/")
     }
 
-    const storeUser = (e) => {
-        e.preventDefault()
-        var form = document.getElementById('newform');
-        var formData = new FormData(form);
-        axios.post(`${API_URL}/users`, formData)
-            .then(res => completeForm(form))
-            .catch(error => console.log(error.response))
-    }
+ 
 
     let myPage = searchParams.get("page") ? searchParams.get("page") : 0;
     return (

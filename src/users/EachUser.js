@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import { API_URL } from "../config";
 import axios from "axios"
 import moment from "moment"
-import { useState } from 'react'
+import React,{useEffect,
+    useRef,useState } from 'react'
+    import fetch from '../fetch/index'
+    import useAsync from '../hooks/useAsync'
 
 export default function EachUser({ user, fetchData }) {
     const [idvalue, setIdValue] = useState(user.id);
@@ -14,7 +17,12 @@ export default function EachUser({ user, fetchData }) {
     const [deteminatorValue, setDeteminatorValue] = useState(user.deteminator);
     const [keteranganValue, setKeteranganValue] = useState(user.keterangan);
 
+    const {  run } = useAsync();
 
+    const refContainer = useRef(null);
+    useEffect(() => {
+        run(fetch({ url: "https://sbc-sebatcabut.herokuapp.com" }));
+      }, [run]);
 
     const openModal = () => {
         document.getElementById('new-modal-' + user.ID).classList.remove("hidden");

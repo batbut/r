@@ -20,7 +20,7 @@ export default function EachUser({ user, fetchData }) {
 
 
     useEffect(() => {
-        run(fetch({ url: "https://sbc-sebatcabut.herokuapp.com/lokasitemuan" }));
+        run(fetch({ url: "https://sbc-sebatcabut.herokuapp.com/fosil" }));
       }, [run]);
 
     const openModal = () => {

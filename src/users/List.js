@@ -38,7 +38,14 @@ export default function List() {
         navigate("/")
     }
 
- 
+    const storeUser = (e) => {
+        e.preventDefault()
+        var form = document.getElementById('newform');
+        var formData = new FormData(form);
+        axios.post(`${API_URL}/users`, formData)
+            .then(res => completeForm(form))
+            .catch(error => console.log(error.response))
+    }
 
     let myPage = searchParams.get("page") ? searchParams.get("page") : 0;
     return (

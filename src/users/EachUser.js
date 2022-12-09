@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { API_URL } from "../config";
 import axios from "axios"
-import moment from "moment"
 import React,{useEffect,
     useRef,useState } from 'react'
     import fetch from '../fetch/index'

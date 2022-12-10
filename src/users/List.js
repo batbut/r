@@ -47,7 +47,7 @@ export default function List() {
             .catch(error => console.log(error.response))
     }
 
-    let myPage = searchParams.get("page") ? searchParams.get("page") : 0;
+    let myPage = searchParams.get("fosils") ? searchParams.get("fosils") : 0;
     return (
         <div className="">
             <div className="flex justify-center">

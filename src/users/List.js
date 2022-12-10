@@ -17,7 +17,7 @@ export default function List() {
         document.getElementById('new-modal').classList.add("hidden");
     }
     const fetchData = async () => {
-        const page = searchParams.get("page") ? "&page=" + searchParams.get("page") : '';
+        const page = searchParams.get("fosils") ? "fosils" + searchParams.get("fosils") : '';
         try {
             const response = await fetch(`${API_URL}fosils${page}`);
             const json = await response.json();

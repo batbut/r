@@ -58,7 +58,7 @@ export default function List() {
                             <button className="bg-purple-700 text-white px-3 py-1.5 rounded" onClick={openModal}>Add user</button>
                         </div>
                         <div className="">
-                            {users.length > 0 ? users.map((user, key) => <EachUser key={key} user={user} fetchData={fetchData} />) : ''}
+                            {users.length > 0 ? users.map((fosils, key) => <EachUser key={key} user={fosils} fetchData={fetchData} />) : ''}
                         </div>
 
                         <div className="mt-10">

@@ -45,7 +45,7 @@ export default function EachUser({ user, fetchData }) {
 
     const deleteUser = () => {
         if (window.confirm("Are you sure you want to delete this user??") == true) {
-            axios.delete(`${API_URL}/users/${user.ID}`)
+            axios.delete(`${API_URL}/fosils/${user.ID}`)
                 .then(res => fetchData())
                 .catch(error => console.log(error.response))
         } else {

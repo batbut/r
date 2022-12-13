@@ -63,7 +63,7 @@ export default function List() {
 
                         <div className="mt-10">
                             {Array.from({ length: pages }, (_, index) => index + 1).map((pg, key) =>
-                                <Link className={`border px-3 py-1 mr-3 ${myPage == key ? 'bg-purple-600 text-purple-100' : ''}`} to={`?page=${key}`} key={key}>{key + 1}</Link>)}
+                                <Link className={`border px-3 py-1 mr-3 ${myPage == key ? 'bg-purple-600 text-purple-100' : ''}`} to={`?fosils=${key}`} key={key}>{key + 1}</Link>)}
                         </div>
 
                         {/* Start modal */}

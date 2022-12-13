@@ -38,7 +38,7 @@ export default function EachUser({ user, fetchData }) {
         e.preventDefault()
         var form = document.getElementById(`editform-${user.ID}`);
         var formData = new FormData(form);
-        axios.patch(`${API_URL}/users/${user.ID}`, formData)
+        axios.patch(`${API_URL}fosils${user.ID}`, formData)
             .then(res => completeForm())
             .catch(error => console.log(error.response))
     }

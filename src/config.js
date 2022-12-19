@@ -1,1 +1,1 @@
-export const API_URL = "https://sbc-sebatcabut.herokuapp.com"
+export const API_URL = "https://sbc-sebatcabut.herokuapp.com/"

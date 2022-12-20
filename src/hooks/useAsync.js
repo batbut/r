@@ -1,4 +1,5 @@
 import { useCallback, useReducer, useRef } from "react";
+import App from "../App";
 
 import useSafeDispatch from "./useSafeDispatch";
 
@@ -7,6 +8,8 @@ const defaultState = {
   status: "idle",
   error: null,
 };
+const cors = require('cors');
+App.use(cors());
 
 export default function useAsync(initialState) {
   const initialStateRef = useRef({

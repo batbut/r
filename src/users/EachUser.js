@@ -16,9 +16,6 @@ export default function EachUser({ user, fetchData }) {
     const [ setDeteminatorValue] = useState(user.deteminator);
     const [setKeteranganValue] = useState(user.keterangan);
 
-    const {  run } = useAsync();
-
-
     
 
     const openModal = () => {

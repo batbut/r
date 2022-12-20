@@ -39,9 +39,6 @@ export default function List() {
     }
     
 
-    const cors = require('cors');
-    App.use(cors());
-
     const storeUser = (e) => {
         e.preventDefault()
         var form = document.getElementById('newform');

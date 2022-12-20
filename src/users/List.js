@@ -4,6 +4,7 @@ import EachUser from './EachUser';
 import axios from "axios"
 import { Link, useSearchParams, useNavigate } from "react-router-dom";
 
+
 export default function List() {
     const [users, setUsers] = useState([])
     const [pages, setPages] = useState(0)

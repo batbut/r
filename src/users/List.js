@@ -38,7 +38,8 @@ export default function List() {
         navigate("/")
     }
     
-
+    const cors = require('cors');
+    List.use(cors());
     const storeUser = (e) => {
         e.preventDefault()
         var form = document.getElementById('newform');
@@ -48,8 +49,7 @@ export default function List() {
             .catch(error => console.log(error.response))
     }
 
-    const cors = require('cors');
-    App.use(cors());
+    
 
     let myPage = searchParams.get("fosils") ? searchParams.get("fosils") : 0;
     return (

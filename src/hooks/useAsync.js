@@ -8,8 +8,7 @@ const defaultState = {
   status: "idle",
   error: null,
 };
-const cors = require('cors');
-App.use(cors());
+
 
 export default function useAsync(initialState) {
   const initialStateRef = useRef({

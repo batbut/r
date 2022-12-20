@@ -47,7 +47,8 @@ export default function List() {
             .catch(error => console.log(error.response))
     }
 
-    
+    const cors = require('cors');
+    storeUser.use(cors());
 
     let myPage = searchParams.get("fosils") ? searchParams.get("fosils") : 0;
     return (

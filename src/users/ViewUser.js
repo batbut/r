@@ -8,7 +8,7 @@ export default function ViewUser() {
   const [user, setUser] = useState({})
   const [loading, setLoading] = useState(false)
 
-  
+
 
   useEffect(() => {
     const fetchUser = async () => {

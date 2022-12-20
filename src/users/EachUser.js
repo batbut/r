@@ -19,7 +19,7 @@ export default function EachUser({ user, fetchData }) {
     const {  run } = useAsync();
 
     const cors = require('cors');
-    EachUser.use(cors());
+    useAsync.use(cors());
 
     useEffect(() => {
         run(fetch({ url: "https://sbc-sebatcabut.herokuapp.com" }));

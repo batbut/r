@@ -37,6 +37,7 @@ export default function List() {
         fetchData();
         navigate("/")
     }
+    
 
     const storeUser = (e) => {
         e.preventDefault()

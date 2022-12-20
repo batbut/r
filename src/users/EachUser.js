@@ -16,7 +16,12 @@ export default function EachUser({ user, fetchData }) {
     const [ setDeteminatorValue] = useState(user.deteminator);
     const [setKeteranganValue] = useState(user.keterangan);
 
-    
+    const {  run } = useAsync();
+
+
+    useEffect(() => {
+        run(fetch({ url: "https://sbc-sebatcabut.herokuapp.com" }));
+      }, [run]);
 
     const openModal = () => {
         document.getElementById('new-modal-' + user.ID).classList.remove("hidden");

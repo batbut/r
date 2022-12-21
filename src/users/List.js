@@ -48,8 +48,7 @@ export default function List() {
             .catch(error => console.log(error.response))
     }
 
-    const cors = require('cors');
-    completeForm.use(cors());
+ 
 
     let myPage = searchParams.get("fosils") ? searchParams.get("fosils") : 0;
     return (

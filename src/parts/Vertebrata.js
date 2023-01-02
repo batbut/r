@@ -2,7 +2,6 @@ import List from "../helpers/validations/List"
 import { useState, useEffect } from "react";
 import { uid } from "uid";
 import axios from "axios";
-
 let api = axios.create({ baseURL: "https://sbc-sebatcabut.herokuapp.com" });
 
 function Vertebrata() {
